@@ -124,4 +124,4 @@ ssh pi@192.168.18.249
 sudo apt-get update & sudo apt-get upgrade
 ```
 
-[Configuração de Servições no Servidor](ConfiguracaoServicoes.md)
+[Configuração de Serviçoes no Servidor](ConfiguracaoServicoes.md)
