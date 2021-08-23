@@ -35,9 +35,6 @@ sudo raspi-config
 
 5. Selecione a Opção "YES"
    
-
-
-
 ### Virtual
 
 #### Web
