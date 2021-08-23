@@ -57,71 +57,70 @@ Raspberry PI OS Lite é um sistema operacional mínimo. Ele atende às necessida
 10. Ligue o Raspberry Pi Zero W na emergia e em um monitor e um teclado para configuração iniciar para liberar o acesso ssh e conectar no Wifi
 
 ![RaspberryPiStart](./img/RaspberryPiStart.jpg)
-
-11. Para Logar no raspberry pi os o *usuario : pi* e a *senha : raspberry*
-
-![RaspberryPiLogin](./img/RaspberryPiLogin.jpg)
-
-12. Execute o comando, para realizar comfiguração de Wifi e SSH
+ 
+12. Para Logar no Raspberry PI OS o *usuario : pi* e a *senha : raspberry* ,execute o comando, para realizar comfiguração de Wifi e SSH
 ```bash
 sudo raspi-config 
 ```
-![RaspberryPiRaspiConfig](./img/RaspberryPiRaspiConfig.jpg)
+![RaspberryPiLogin](./img/RaspberryPiLogin.jpg)
 
 13. Selecione a Opção System Options
-
-![RaspberryPiSystemOptions](./img/RaspberryPiSystemOptions.jpg)
+![RaspberryPiRaspiConfig](./img/RaspberryPiRaspiConfig.jpg)
 
 14. Selecione a Opção Wireless LAN
+![RaspberryPiSystemOptions](./img/RaspberryPiSystemOptions.jpg)
+
+15. Selecione a País
 
 ![RaspberryPiWirelessLAN](./img/RaspberryPiWirelessLAN.jpg)
 
-15. Selecione a País 
+ 16. Entre com o nome da  rede wifi
 
 ![RaspberryPiPais](./img/RaspberryPiPais.jpg)
 
-16. Entre com o nome da  rede wifi
+17. Entre com o senha da  rede wifi
 
 ![RaspberryPiSSID](./img/RaspberryPiSSID.jpg)
 
-17. Entre com o senha da  rede wifi
+18. Selecione a Opção Interface Options
 
 ![RaspberryPiPassphrase](./img/RaspberryPiPassphrase.jpg)
 
-18. Selecione a Opção Interface Options 
+ 
+19. Selecione a Opção SSH 
 
 ![RaspberryPiInterfaceOptions](./img/RaspberryPiInterfaceOptions.jpg)
 
-19. Selecione a Opção SSH 
+20. Selecione a Opção "YES"
 
 ![RaspberryPiSSH](./img/RaspberryPiSSH.jpg)
 
-20. Selecione a Opção "YES"
+21. Selecione a Opção "Finish"
 
 ![RaspberryPiSSHYES](./img/RaspberryPiSSHYES.jpg)
 
 
-21. Selecione a Opção "Finish"
-    
-![RaspberryPiFinish](./img/RaspberryPiFinish.jpg)
 
 22.  Execute o comando, para Pegar o IP do Raspberry Pi Zero W na Rede,para assim realizar o acesso remoto via ssh
 ```bash
 ifconfig
 ```
-
-![PowershellSSHClient](./img/PowershellSSHClient.PNG)
+![RaspberryPiFinish](./img/RaspberryPiFinish.jpg)
 
 23. Em outra maquina iniciar o powershell e execute o comando  ssh USUARIO@IP,para acessar uma maquina remota, digite "yes" para aceitar a key de authenticity e entre com a senha do usuario
 ```bash
 ssh pi@192.168.18.249
 ```
 
-![PowershellSSHClientUpdate](./img/PowershellSSHClientUpdate.PNG)
+![PowershellSSHClient](./img/PowershellSSHClient.PNG)
 
 23. Execute os comandos para atualizar os pacote
 ```bash
 sudo apt-get update & sudo apt-get upgrade
 ```
+
+![PowershellSSHClientUpdate](./img/PowershellSSHClientUpdate.PNG)
+
+
 
 [Configuração de Serviçoes no Servidor](ConfiguracaoServicoes.md)
