@@ -14,7 +14,8 @@ def getStatusService(name):
 def index():
   Mysql = getStatusService("mariadb")
   MQTT = getStatusService("mosquitto")
-  return render_template('index.html',Mysql=Mysql,MQTT=MQTT)
+  RAIMPersistencia = getStatusService("RAIMPersistencia")
+  return render_template('index.html',Mysql=Mysql,MQTT=MQTT,RAIMPersistencia=RAIMPersistencia)
 
 if __name__ == "__main__":
  app.run(host='0.0.0.0', port=5000)

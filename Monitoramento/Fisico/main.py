@@ -37,6 +37,11 @@ def MYSQL(draw, width, height):
     EscreveInformacaoDisplayOLED("Serviço MYSQL",getStatusService("mariadb"),draw,width,height)
     return
 
+def RAIMPersistencia(draw, width, height):
+    EscreveInformacaoDisplayOLED("Serviço RAIMPersistencia",getStatusService("RAIMPersistencia"),draw,width,height)
+    return
+    
+
 disp.begin()
 disp.clear()
 disp.display()
@@ -52,4 +57,6 @@ while True:
     MQTT(draw,width,height)
     time.sleep(3)
     MQTT(draw,width,height)
+    time.sleep(3)
+    RAIMPersistencia(draw,width,height)
     time.sleep(3)
