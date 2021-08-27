@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import telebot
 import time
 
-bot = telebot.TeleBot('1959854630:AAGyY9TQekQ47x0ZgCV9FhAbV_X_0HrC-CA')
+bot = telebot.TeleBot('TOKEN')
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
