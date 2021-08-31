@@ -87,16 +87,54 @@
         <div class="col s12 m6">
           <div class="card">
             <div class="card-image center">
-              <span id="currentTemp" class="statistic">{{ RAIMPersistencia }}</span>
+              <span id="currentTemp" class="statistic">{{ MVRAIM }}</span>
             </div>
             <div class="card-content">
               <span class="card-title activator grey-text text-darken-4">
-                Serviço MQTT
+                Serviço MonitoramentoVirtualRAIM (MVRAIM)
               </span>
             </div>
           </div>
         </div>
 
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image center">
+              <span id="currentTemp" class="statistic">{{ MFRAIM }}</span>
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">
+                Serviço MonitoramentoFisicoRAIM (MFRAIM)
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image center">
+              <span id="currentTemp" class="statistic">{{ PDRAIM }}</span>
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">
+                Serviço PersistenciaDadosRAIM (PDRAIM)
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image center">
+              <span id="currentTemp" class="statistic">{{ CHRAIM }}</span>
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">
+                Serviço ChatBotRAIM (CHRAIM)
+              </span>
+            </div>
+          </div>
+        </div>
 
 
     </div>
@@ -107,3 +145,6 @@
   <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
   <script src="app.js"></script>
 </html>
+
+
+

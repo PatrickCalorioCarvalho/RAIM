@@ -34,6 +34,34 @@ sudo raspi-config
 ![RaspberryPiI2C](./img/RaspberryPiI2C.PNG)
 
 5. Selecione a Opção "YES"
+
+6. Criando Serviço MonitoramentoFisicoRAIM
+```bash
+cd /lib/systemd/system/
+sudo nano MFRAIM.service
+```
+
+```bash
+[Unit]
+Description=MonitoramentoFisicoRAIM
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/RAIM/Monitoramento/Fisico/main.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```bash
+sudo chmod 644 /lib/systemd/system/MFRAIM.service
+chmod +x /home/pi/RAIM/Monitoramento/Fisico/main.py
+sudo systemctl daemon-reload
+sudo systemctl enable MFRAIM
+sudo systemctl start MFRAIM
+```
    
 ### Virtual
 
@@ -49,4 +77,33 @@ sudo raspi-config
  
 ```bash
 sudo pip3 install flask
+```
+
+
+2. Criando Serviço MonitoramentoVirtualRAIM
+```bash
+cd /lib/systemd/system/
+sudo nano MVRAIM.service
+```
+
+```bash
+[Unit]
+Description=MonitoramentoVirtualRAIM
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/RAIM/Monitoramento/Virtual/main.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```bash
+sudo chmod 644 /lib/systemd/system/MVRAIM.service
+chmod +x /home/pi/RAIM/Monitoramento/Virtual/main.py
+sudo systemctl daemon-reload
+sudo systemctl enable MVRAIM
+sudo systemctl start MVRAIM
 ```
